@@ -61,7 +61,7 @@
 
   @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
     .intro {
-      background: url("../img/bg-intro-triangle-desktop.svg") center/100% no-repeat, url("../img/text-sedona-index.svg") center no-repeat, url('../img/bg-back-desktop@2x.jpg') center/100% no-repeat;
+      background: url("../img/bg-intro-triangle-desktop.svg") center/100% no-repeat, url("../img/text-sedona-index.svg") center no-repeat, url("../img/bg-back-desktop@2x.jpg") center/100% no-repeat;
       background-position-y: 101%, 46%, 10%;
 
       &--sub {

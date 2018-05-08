@@ -38,13 +38,13 @@
 
 .nav__toggle-button--close {
   display: block;
-  background: url('../img/icon-cross.svg') no-repeat;
+  background: url("../img/icon-cross.svg") no-repeat;
   background-size: contain;
 }
 
 .nav__toggle-button--open {
   display: none;
-  background: url('../img/icon-menu.svg') no-repeat;
+  background: url("../img/icon-menu.svg") no-repeat;
   background-size: contain;
 }
 

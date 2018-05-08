@@ -25,8 +25,8 @@
   &__radio-text {
     padding-left: 75px;
 
-      &::before {
-      content: '';
+    &::before {
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -41,7 +41,7 @@
     padding-left: 75px;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -72,7 +72,7 @@
       position: absolute;
       width: 59px;
       height: 59px;
-      background: url('../img/icon-phone.svg') 50%/30% no-repeat;
+      background: url("../img/icon-phone.svg") 50%/30% no-repeat;
       background-color: $dsiabled-color;
       bottom: 0;
       right: 0;
@@ -90,7 +90,7 @@
       position: absolute;
       width: 59px;
       height: 59px;
-      background: url('../img/icon-mail.svg') 50%/30% no-repeat;
+      background: url("../img/icon-mail.svg") 50%/30% no-repeat;
       background-color: $dsiabled-color;
       bottom: 0;
       right: 0;
@@ -132,7 +132,7 @@
 }
 
 .form__radio:checked + .form__label__radio-text::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 20px;
   left: 16px;
@@ -153,13 +153,13 @@
 }
 
 .form__checkbox:checked + .form__label__checkbox-text::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 20px;
   left: 16px;
   width: 22px;
   height: 22px;
-  background: url('../img/icon-tick.svg') no-repeat;
+  background: url("../img/icon-tick.svg") no-repeat;
 }
 
 
@@ -216,7 +216,6 @@
 
   .form__label-text {
     &--contact-phone {
-
       &::after {
         width: 57px;
         height: 57px;
@@ -267,7 +266,7 @@
     padding: 0;
   }
 
-  .form__label { //отличаются от других -> в разделе "контакты"
+  .form__label {
     vertical-align: middle;
     min-width: 230px;
 
@@ -276,9 +275,7 @@
       line-height: 59px;
       flex-direction: row;
     }
-  }
 
-  .form__label {
     &-text--desktop {
       display: block;
     }
@@ -305,6 +302,16 @@
   .form__title {
     &--left {
       text-align: left;
+    }
+  }
+
+  .form__title--decoration {
+    &::after {
+      width: 240px;
+    }
+
+    &::before {
+      width: 240px;
     }
   }
 
