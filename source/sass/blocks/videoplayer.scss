@@ -7,6 +7,7 @@
     min-height: 201px;
     background-image: url("../img/video-mobile@1x.jpg");
     background-size: contain;
+
     @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
       background-image: url("../img/video-mobile@2x.jpg");
     }
@@ -95,9 +96,10 @@
 
     &__wrap {
       width: 650px;
-      min-height: 451px;
+      height: 500px;
       background-image: url("../img/video-tablet@1x.jpg");
       background-size: cover;
+
       @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
         background-image: url("../img/video-tablet@2x.jpg");
       }
@@ -154,13 +156,32 @@
     width: 800px;
 
     &__wrap {
-      width: 650px;
+      width: 100%;
       min-height: 451px;
       background-image: url("../img/video-desktop@1x.jpg");
       background-size: contain;
+
       @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
         background-image: url("../img/video-desktop@2x.jpg");
       }
     }
+  }
+
+  .videoplayer__controls__sub {
+    right: 11%;
+    fill: $input-color;
+  }
+
+  .videoplayer__controls__fullscreen {
+    right: 5%;
+    fill: $input-color;
+  }
+
+  .progress__value {
+    left: 26%;
+  }
+
+  .progress__bar {
+    width: 65%;
   }
 }

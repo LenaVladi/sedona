@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width">
     <title>Главная</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js"></script>
   </head>
   <body>
     <section class="header">
-      <nav class="nav nav--closed font-menu">
+      <nav class="nav nav--not-js font-menu">
         <ul class="nav__list list-style-none">
           <li class="nav__item nav__item--pos1 nav__active">
             <a class="nav__link" href="index.html">Главная</a>
@@ -97,7 +98,7 @@
         <button class="button prompt__request font-btn" type="button">Найти гостиницу</button>
       </section>
       <div class="map">
-        <!-- <img class="map map__bg" src="#" alt=""> -->
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A892ffb5fbd4b9d9abb46fdfd4daf485c37654a977e263f7b3b3c7c69770e38b6&amp;source=constructor" width="100%" height="352" frameborder="0"></iframe>
       </div>
     </main>
     <footer class="footer">
