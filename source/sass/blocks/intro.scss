@@ -5,7 +5,7 @@
   min-height: 388px;
   font-size: 0;
   background-color: $main-color;
-  background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-tablet@1x.jpg");
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-mobile@1x.jpg");
   background-repeat:  no-repeat,  no-repeat,  no-repeat;
   background-size: 110%, 88%, 240%;
   background-position: center 100%, center 51%, center;
@@ -14,7 +14,9 @@
     min-height: 158px;
     width: 100%;
     margin-bottom: 0;
-    background: url("../img/bg-intro-triangle-mobile.svg") center/110% no-repeat, url("../img/text-sedona.svg") center/73% no-repeat, url("../img/bg-back-mobile@1x.jpg") center/240% no-repeat;
+    background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/text-sedona.svg") , url("../img/bg-back-mobile@1x.jpg");
+    background-size: 110%, 73%, 240%;
+    background-repeat: no-repeat;
     background-position-y: 100%, 43%, bottom;
   }
 }
@@ -29,7 +31,8 @@
 
     &--sub {
       min-height: 290px;
-      background: url("../img/bg-intro-triangle-tablet.svg") center/100% no-repeat, url("../img/text-sedona.svg") center/60% no-repeat, url("../img/bg-back-tablet@1x.jpg") center/100% no-repeat;
+      background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona.svg") , url("../img/bg-back-tablet@1x.jpg");
+      background-size: 100%, 60%, 100%;
       background-position-y: 100%, 45%, bottom;
     }
   }
@@ -39,7 +42,7 @@
       background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-tablet@2x.jpg");
 
       &--sub {
-        background: url("../img/bg-intro-triangle-tablet.svg") center/100% no-repeat, url("../img/text-sedona.svg") center/60% no-repeat, url("../img/bg-back-tablet@2x.jpg") center/100% no-repeat;
+        background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/text-sedona.svg") , url("../img/bg-back-tablet@2x.jpg");
       }
     }
   }

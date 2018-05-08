@@ -87,9 +87,12 @@
 
       &--visit {
         width: 460px;
+        padding-top: 20px;
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-content: space-between;
         align-self: center;
       }
     }
