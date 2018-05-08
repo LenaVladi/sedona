@@ -1,14 +1,22 @@
 .prompt {
   display: flex;
   flex-direction: column;
-  margin: 11px auto;
+  margin: 11px auto 50px;
   padding: 0 20px;
-  height: 204px;
 
   &--sub {
     height: 182px;
     padding: 20px;
   }
+}
+
+.prompt__text {
+  margin: 5px 0 35px;
+  line-height: 1.7;
+}
+
+.prompt__title {
+  font-size: 20px;
 }
 
 @media (min-width: $tablet-width) {

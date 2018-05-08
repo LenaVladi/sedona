@@ -47,6 +47,13 @@
 .advantage--secondary {
   background: $lightgray;
   color: black;
+  height: 167px;
+  padding: 30px 40px;
+  border-bottom: 1px solid #999999;
+
+  &:last-child {
+    border: none;
+  }
 }
 
 @media (min-width: $tablet-width) {

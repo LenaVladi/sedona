@@ -28,7 +28,8 @@
 .nav__toggle-button {
   position: absolute;
   border: none;
-  background: transparent;
+  background: url("../img/icon-cross.svg") no-repeat;
+  background-size: contain;
   width: 24px;
   height: 24px;
   right: 20px;
@@ -36,38 +37,16 @@
   font-size: 0;
 }
 
-.nav__toggle-button--close {
-  display: block;
-  background: url("../img/icon-cross.svg") no-repeat;
-  background-size: contain;
-}
-
-.nav__toggle-button--open {
-  display: none;
+.nav--closed .nav__toggle-button {
   background: url("../img/icon-menu.svg") no-repeat;
-  background-size: contain;
 }
 
-// .nav--clossed + .nav__item {
-//   display: none;
-// }
+.nav--closed .nav__item {
+  display: none;
+}
 
-// .nav--clossed + .nav__item--logo, .nav--clossed + .nav__toggle-button--open {
-//   display: block;
-// }
-
-.nav--clossed {
-  .nav__item--none {
-    display: none;
-  }
-
-  .nav__toggle-button--open {
-    display: block;
-  }
-
-  .nav__item--logo {
-    display: block;
-  }
+.nav--closed .nav__item--logo {
+  display: block;
 }
 
 @media (min-width: $tablet-width) {
