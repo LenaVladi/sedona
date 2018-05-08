@@ -12,7 +12,6 @@
   &--sub-size-m {
     height: 203px;
     padding: 20px 20px;
-    border-bottom: 1px solid $lightgray;
   }
 
   &--triangle {
@@ -38,9 +37,9 @@
 @media (min-width: $tablet-width) {
   .description {
     width: 702px;
-    height: 186px;
+    min-height: 186px;
     margin: 0 auto;
-    padding: 10px 50px;
+    padding: 45px 50px;
 
     &--sub {
       height: 235px;
@@ -50,6 +49,10 @@
     &::before {
       display: none;
     }
+  }
+
+  .description__title--big {
+    font-size: 30px;
   }
 
   .description__text {
