@@ -151,6 +151,12 @@
 }
 
 @media (min-width: $desktop-width) {
+  .progress__bar {
+    width: 65%;
+  }
+}
+
+@media (min-width: $desktop-width) {
   .videoplayer {
     margin-bottom: 40px;
     width: 800px;
@@ -182,6 +188,6 @@
   }
 
   .progress__bar {
-    width: 65%;
+    width: 70%;
   }
 }
