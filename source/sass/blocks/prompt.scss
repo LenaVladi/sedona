@@ -5,7 +5,7 @@
   padding: 0 20px;
 
   &--sub {
-    height: 182px;
+    height: 142px;
     padding: 20px;
   }
 }
@@ -16,7 +16,7 @@
 }
 
 .prompt__title {
-  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: $tablet-width) {
