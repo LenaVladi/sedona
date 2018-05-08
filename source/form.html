@@ -8,7 +8,7 @@
 </head>
 <body>
   <section class="header">
-    <nav class="nav font-menu">
+    <nav class="nav .nav--clossed font-menu">
       <ul class="nav__list list-style-none">
         <li class="nav__item nav__item--pos1 nav__active">
           <a class="nav__link" href="index.html">Главная</a>
@@ -22,37 +22,26 @@
         <li class="nav__item">
           <a class="nav__link" href="https://htmlacademy.ru/intensive/adaptive">Html Academy</a>
         </li>
-        <li class="nav__item nav__item--logo nav__item--logo-sub">
+        <li class="nav__item nav__item--logo">
           <a class="header__logo logo" href="index.html"></a>
         </li>
       </ul>
+      <button class="nav__toggle-button nav__toggle-button--open nav__toggle-button--close" type="button"></button>
     </nav>
-    <button class="header__nav-toggle" type="button">
-      <svg class="header__nav-toggle__open" id="menu-burger" fill="#81b3d2" x="0px" y="0px" width="23.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve">
-        <g>
-          <rect width="22.928" height="3.964"/>
-          <rect y="9.009" width="22.928" height="3.964"/>
-          <rect y="18.018" width="22.928" height="3.964"/>
-        </g>
-      </svg>
-      <svg class="header__nav-toggle__close" id="menu-close" fill="#ffffff" x="0px" y="0px" width="23.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
-        <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
-      </svg>
-    </button>
     <section class="intro intro--sub">
       <h1 class="intro__caption">Sedona</h1>
     </section>
   </section>
   <main class="main">
     <section class="description description--sub-size-m">
-      <p class="description__title font-title font-title--big">Оставьте свой отзыв</p>
+      <p class="description__title font-title">Оставьте свой отзыв</p>
       <p class="description__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них,<br class="desktop-br"> а также о посещенных вами достопримечательностях</p>
     </section>
     <section class="form">
-      <form class="get-feedback form__border-top" action="https://echo.htmlacademy.ru" method="POST">
+      <form class="get-feedback" action="https://echo.htmlacademy.ru" method="POST">
         <div class="get-feedback__name get-feedback__item">
           <h2 class="form__title form__title--left font-title">Представьтесь:</h2>
-          <div class="get-feedback__name-wrap">
+          <div class="get-feedback__item-wrap get-feedback__item-wrap--name">
             <label class="form__label form__label--thin" for="name"><span class="form__label__text">Имя<sup>*</sup>:</span>
               <input class="form__input form__input--size-m font-input" name="name" type="text" id="name" placeholder="Пётр">
             </label>
@@ -64,22 +53,22 @@
             </label>
           </div>
         </div>
-        <div class="get-feedback__contact get-feedback__item form__border-top">
+        <div class="get-feedback__contact get-feedback__item">
           <h2 class="form__title font-title">Контактная информация:</h2>
-          <div class="get-feedback__contact-wrap">
-            <label class="form__label form__label--thin" for="phone">
-              <span class="form__label__text form__label__text--desktop-off">Контактный телефон<sup>*</sup>:</span><span class="form__label__text form__label__text--desktop">телефон<sup>*</sup>:</span>
+          <div class="get-feedback__item-wrap get-feedback__item-wrap--contact">
+            <label class="form__label form__label--column form__label--thin" for="phone">
+              <span class="form__label__text form__label__text--contact-email form__label__text--desktop-off">Контактный телефон<sup>*</sup>:</span><span class="form__label__text form__label__text--desktop">телефон<sup>*</sup>:</span>
               <input class="form__input form__input--size-m form__input--tablet font-input" name="phone" type="tel" id="phone" placeholder="Введите телефон" pattern="8|\+7?\d+">
             </label>
-            <label class="form__label form__label--thin" for="email">
-              <span class="form__label__text">Электронная почта<sup>*</sup>:</span>
+            <label class="form__label form__label--column form__label--thin" for="email">
+              <span class="form__label__text form__label__text--contact-email">Электронная почта<sup>*</sup>:</span>
               <input class="form__input form__input--size-m form__input--tablet font-input" name="email" type="email" id="email" placeholder="Введите email" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,6}$">
             </label>
           </div>
         </div>
-        <div class="get-feedback__impression get-feedback__item form__border-top">
+        <div class="get-feedback__impression get-feedback__item">
           <h2 class="form__title font-title">Ваше общее впечатление:</h2>
-          <div class="get-feedback__impression-wrap">
+          <div class="get-feedback__item-wrap get-feedback__item-wrap--impression">
             <label class="form__label font-input" for="good">
               <input class="form__radio" name="impression" type="radio" value="impression-good" id="good" checked>
               <span class="form__label__radio-text">Скорее положительное</span>
@@ -96,17 +85,17 @@
         </div>
         <div class="get-feedback__visit get-feedback__item">
           <h2 class="form__title font-title form__border-top">Посещенные<br>достопримечательности:</h2>
-          <div class="get-feedback__visit-wrap">
+          <div class="get-feedback__item-wrap get-feedback__item-wrap--visit">
             <label class="form__label font-input" for="devil-bridge">
               <input class="form__checkbox" name="visit-devil-bridge" type="checkbox" id="devil-bridge" checked>
               <span class="form__label__text form__label__checkbox-text">Мост Дьявола</span>
             </label>
             <label class="form__label font-input" for="mountain-bell">
-              <input class="form__checkbox" name="get-visit-mountain-bell" type="checkbox" id="mountain-bell">
+              <input class="form__checkbox" name="get-visit-mountain-bell" type="checkbox" id="mountain-bell" checked>
               <span class="form__label__text form__label__checkbox-text">Гора-Колокол</span>
             </label>
             <label class="form__label font-input" for="slide-park">
-              <input class="form__checkbox" name="visit-slide-park" type="checkbox" id="slide-park">
+              <input class="form__checkbox" name="visit-slide-park" type="checkbox" id="slide-park" checked>
               <span class="form__label__text form__label__checkbox-text">Слайд-парк</span>
             </label>
             <label class="form__label font-input" for="red-rock">

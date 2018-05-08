@@ -2,19 +2,60 @@
   display: flex;
   flex-direction: column;
 
-  &__name {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    border-bottom: 1px solid $lightgray;
+  }
+
+  &__item-wrap {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
+
+    &--name {
+      height: 305px;
+    }
+
+    &--contact {
+      height: 195px;
+    }
+
+    &--impression {
+      height: 203px;
+    }
+
+    &--visit {
+      height: 295px;
+    }
+  }
+
+  &__name {
+    height: 305px;
+  }
+
+  &__contact {
+    height: 287px;
+  }
+
+  &__impression {
+    height: 288px;
+  }
+
+  &__visit {
+    height: 409px;
   }
 
   &__feedback {
-    display: flex;
-    flex-direction: column;
+    height: 350px;
     align-items: center;
-    margin-top: 40px;
+    border-bottom: none;
   }
 
   &__request {
-    margin-top: 30px;
+    width: 100%;
+    margin-top: 50px;
   }
 }
 

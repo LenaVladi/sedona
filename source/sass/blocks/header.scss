@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   min-width: 320px;
-  min-height: 450px;
+  //min-height: 450px;
   background-color: #ffffff;
 }
 
@@ -15,23 +15,6 @@
   z-index: 3;
 }
 
-.header__nav-toggle {
-  position: absolute;
-  top: $menu-item-height * 4;
-  border: none;
-  background: transparent;
-  right: -12px;
-  font-size: 0;
-
-  &__open {
-    vertical-align: middle;
-  }
-
-  &__close {
-    bottom: 40%;
-  }
-}
-
 @media (min-width: $tablet-width) {
   .header {
     min-width: $tablet-width;
@@ -41,10 +24,6 @@
   .header__logo {
     width: 102px;
     background-image: url("../img/logo-sedona-tablet.svg");
-  }
-
-  .header__nav-toggle {
-    display: none;
   }
 }
 
