@@ -1,7 +1,6 @@
 .description {
   position: relative;
   min-width: 320px;
-  height: 180px;
   padding: 0 30px;
 
   &--sub {
@@ -15,15 +14,15 @@
   }
 
   &--triangle {
-    &::before {
+    &::after {
       content: "";
       display: block;
       width: 100%;
-      height: 80px;
+      height: 72px;
       position: absolute;
-      bottom: -77px;
+      bottom: -72px;
       left: 0;
-      background: url("../img/bg-triangle.svg") no-repeat;
+      background: url("../img/bg-triangle.svg") no-repeat, $main-color;
       background-size: contain;
     }
   }
@@ -37,16 +36,15 @@
 @media (min-width: $tablet-width) {
   .description {
     width: 702px;
-    min-height: 186px;
     margin: 0 auto;
-    padding: 45px 50px;
+    padding: 10px 50px 30px;
 
     &--sub {
       height: 235px;
       padding-top: 44px;
     }
 
-    &::before {
+    &::after {
       display: none;
     }
   }
