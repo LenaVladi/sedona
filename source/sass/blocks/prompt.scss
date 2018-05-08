@@ -21,9 +21,8 @@
 
 @media (min-width: $tablet-width) {
   .prompt {
-    padding: 40px 0;
+    padding: 40px 0 10px;
     width: 648px;
-    height: 295px;
 
     &--sub {
       height: 222px;
