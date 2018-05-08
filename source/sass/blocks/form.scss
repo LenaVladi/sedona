@@ -267,13 +267,14 @@
 @media (min-width: $desktop-width) {
   .form {
     width: 960px;
-    margin: 10px auto;
-    padding: 0;
+    margin: 0 auto;
+    padding: 10px 0 30px;
   }
 
   .form__label {
     vertical-align: middle;
-    min-width: 230px;
+    min-width: 0;
+    line-height: 60px;
 
     &--column {
       height: 59px;
@@ -292,7 +293,7 @@
 
   .form__input {
     &--size-s {
-      width: 300px;
+      width: 320px;
     }
 
     &--size-m {
@@ -322,5 +323,19 @@
 
   .form__endnote {
     bottom: 0;
+  }
+
+  .form__label-text {
+    &--contact-phone {
+      &::after {
+        top: 0;
+      }
+    }
+
+    &--contact-email {
+      &::after {
+        top: 0;
+      }
+    }
   }
 }
