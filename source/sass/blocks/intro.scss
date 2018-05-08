@@ -50,8 +50,9 @@
     min-width: $desktop-width;
     min-height: 518px;
     margin: 0;
-    background: url("../img/bg-intro-triangle-desktop.svg") center/100% no-repeat, url("../img/text-sedona-index.svg") center no-repeat, url("../img/bg-back-desktop@1x.jpg") center/100% no-repeat;
-    background-position-y: 101%, 46%, 10%;
+    background-image:  url("../img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-desktop@1x.jpg");
+    background-size: 100%, auto, 100%;
+    background-position: center 100%, center 46%, center 10%;
 
     &--sub {
       margin-bottom: 60px;
@@ -63,7 +64,7 @@
 
   @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
     .intro {
-      background: url("../img/bg-intro-triangle-desktop.svg") center/100% no-repeat, url("../img/text-sedona-index.svg") center no-repeat, url("../img/bg-back-desktop@2x.jpg") center/100% no-repeat;
+      background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/text-sedona-index.svg"), url("../img/bg-back-desktop@2x.jpg");
 
       &--sub {
         background: url("../img/bg-intro-triangle-desktop.svg") center/100% no-repeat, url("../img/text-sedona.svg") center/38% no-repeat, url("../img/bg-back-desktop@2x.jpg") center/100% no-repeat;

@@ -54,8 +54,12 @@
     background: #ffffff;
   }
 
-  .nav__toggle {
+  .nav__toggle-button {
     display: none;
+  }
+
+  .nav--closed .nav__item {
+    display: block;
   }
 
   .nav__list {
