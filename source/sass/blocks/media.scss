@@ -1,5 +1,5 @@
 .media {
-  padding-bottom: 100px;
+  padding-bottom: 107px;
 }
 
 .media__item {
@@ -107,8 +107,16 @@
 
   .media__like {
     position: absolute;
-    right: 20px;
-    bottom: 30px;
+    right: 28px;
+    bottom: 25px;
+
+    &--big {
+      right: 22px;
+    }
+
+    &--third {
+      right: 37px;
+    }
   }
 }
 

@@ -1,11 +1,11 @@
 .prompt {
   display: flex;
   flex-direction: column;
-  margin: 11px auto 50px;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 10px 20px 47px;
 
   &--sub {
-    height: 142px;
+    height: 192px;
     padding: 20px;
   }
 }
@@ -21,12 +21,12 @@
 
 @media (min-width: $tablet-width) {
   .prompt {
-    padding: 40px 0 10px;
+    padding: 48px 0 62px;
     width: 648px;
 
     &--sub {
-      height: 222px;
-      padding: 50px 0;
+      height: auto;
+      padding: 60px 0 35px;
     }
   }
 
@@ -49,7 +49,6 @@
 
 @media (min-width: $desktop-width) {
   .prompt {
-    margin: 0 auto;
     padding: 50px 0;
     height: 330px;
 
