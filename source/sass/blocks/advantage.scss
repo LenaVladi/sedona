@@ -1,10 +1,21 @@
 .advantage {
-  background: $main-color;
-  color: #ffffff;
-  padding: 10px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+
+  &--sub-list {
+    background-color: $lightgray;
+  }
+}
+
+.advantage__title {
+  margin: 0 0 9px 0;
 }
 
 .advantage__text {
+  margin: 0 0 14px 0;
+
   &--num {
     &::before {
       content: "\2014";
@@ -18,56 +29,121 @@
   }
 }
 
-.advantage--bg {
+.advantage__description {
+  height: 190px;
+  background: $main-color;
+  color: #ffffff;
+  padding: 40px;
+
+  &--sub-list {
+    background-color: $lightgray;
+    color: black;
+    height: 167px;
+    padding: 30px 10px;
+    margin: 0 25px;
+    border-bottom: 1px solid #d6d6d6;
+    flex: 1;
+
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.advantage__bg {
   padding: 0;
   min-width: 320px;
-  min-height: 256px;
+  height: 260px;
 
   &-1 {
     background: #d5806d url("../img/main-city-mobile@1x.jpg") center/100% no-repeat;
     background-clip: border-box;
+
+    @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+      background: #d5806d url("../img/main-city-mobile@2x.jpg") center/100% no-repeat;
+    }
   }
 
   &-2 {
     background: #d5806d url("../img/main-bridge-mobile@1x.jpg") center/100% no-repeat;
     background-clip: border-box;
-  }
-}
 
-.advantage--secondary {
-  background: $lightgray;
-  color: black;
+    @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+      background: #d5806d url("../img/main-bridge-mobile@2x.jpg") center/100% no-repeat;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
   .advantage {
-    width: 256px;
-    height: 256px;
-    padding: 28px 48px;
+    flex-direction: row;
 
-    &--pos1 {
-      order: 2;
+    &--reverse {
+      flex-direction: row-reverse;
     }
 
-    &--pos2 {
-      order: 1;
-    }
-
-    &--pos3 {
-      order: 3;
-    }
-
-    &--pos4 {
-      order: 4;
-    }
-
-    &--pos5 {
-      order: 5;
+    &--sub-list {
+      flex-wrap: wrap;
+      width: 100%;
     }
   }
 
-  .advantage--secondary {
+  .advantage__description {
+    width: 256px;
+    height: 256px;
+    padding: 45px;
+
+    &--sub-list {
+      border-bottom: none;
+    }
+  }
+
+  .advantage__text {
+    margin: 0 0 20px 0;
+  }
+
+  .advantage__title {
+    margin: 0 0 10px 0;
+  }
+
+  .advantage__bg {
+    min-width: 511px;
+    height: 256px;
     flex-grow: 1;
+
+    &-1 {
+      background: url("../img/main-city-tablet@1x.jpg") center/100% no-repeat;
+
+      @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+        background: #d5806d url("../img/main-city-tablet@2x.jpg") center/100% no-repeat;
+      }
+    }
+
+    &-2 {
+      background: url("../img/main-bridge-tablet@1x.jpg") center/100% no-repeat;
+
+      @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+        background: #d5806d url("../img/main-bridge-tablet@2x.jpg") center/100% no-repeat;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantage__description {
+    width: 400px;
+    height: 256px;
+    padding: 40px;
+
+    &--sub-list {
+      margin: 0;
+      padding: 35px 50px;
+    }
+  }
+
+  .advantage__title {
+    margin: 13px 0 10px 0;
+    padding: 0 80px;
   }
 
   .advantage--bg {
@@ -76,25 +152,23 @@
     flex-grow: 1;
 
     &-1 {
-      background: url("../img/main-city-mobile@1x.jpg") center/100% no-repeat;
-      background-clip: border-box;
+      background: url("../img/main-city-desktop@1x.jpg") center/100% no-repeat;
+
+      @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+        background: #d5806d url("../img/main-city-desktop@2x.jpg") center/100% no-repeat;
+      }
     }
 
     &-2 {
-      background: url("../img/main-bridge-mobile@1x.jpg") center/100% no-repeat;
-      background-clip: border-box;
+      background: url("../img/main-bridge-desktop@1x.jpg") center/100% no-repeat;
+
+      @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+        background: #d5806d url("../img/main-bridge-desktop@2x.jpg") center/100% no-repeat;
+      }
     }
   }
-}
 
-@media (min-width: $desktop-width) {
-  .advantage {
-    width: 400px;
-    height: 256px;
-    padding: 28px 48px;
-  }
-
-  .advantage__title {
-    padding: 0 80px;
+  .advantage__text {
+    margin: 0 0 20px 0;
   }
 }

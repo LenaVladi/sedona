@@ -1,11 +1,11 @@
 .advantages {
   display: flex;
   flex-direction: column;
+  padding-top: 35px;
 }
 
 @media (min-width: $tablet-width) {
   .advantages {
-    flex-direction: row;
-    flex-wrap: wrap;
+    padding-top: 0;
   }
 }

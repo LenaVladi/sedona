@@ -2,6 +2,10 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
+
+  &--big {
+    font-size: 21px;
+  }
 }
 
 @media (min-width: $tablet-width) {

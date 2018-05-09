@@ -5,34 +5,11 @@
   <meta name="viewport" content="width=device-width">
   <title>Форма отзыва</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    HTML {
-      background-repeat: no-repeat;
-      background-position:  50% 0;
-      /* Mobile layout by default */
-      background-image: url( "../preview/sedona-form-mobile.jpg" );
-    }
-    /* Tablet */
-    @media ( min-width: 768px ) {
-      HTML {
-        /* Tablet layout */
-        background-image: url( "../preview/sedona-form-tablet.jpg" );
-      }
-    }
-    /* Desktop */
-    @media ( min-width: 1200px ) {
-      HTML {
-        /* Desktop layout */
-        background-image: url( "../preview/sedona-form-desktop.jpg" );
-      }
-    }
-  </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js"></script>
 </head>
 <body>
   <section class="header">
-    <nav class="nav font-menu">
+    <nav class="nav nav--closed nav--nojs font-menu">
       <ul class="nav__list list-style-none">
         <li class="nav__item nav__item--pos1 nav__active">
           <a class="nav__link" href="index.html">Главная</a>
@@ -50,102 +27,94 @@
           <a class="header__logo logo" href="index.html"></a>
         </li>
       </ul>
+      <button class="nav__toggle-button" type="button"></button>
     </nav>
-    <button class="header__nav-toggle" type="button">
-      <svg class="header__nav-toggle__open" id="menu-burger" fill="#81b3d2" x="0px" y="0px" width="23.928px" height="21.982px" viewBox="0 0 22.928 21.982" enable-background="new 0 0 22.928 21.982" xml:space="preserve">
-        <g>
-          <rect width="22.928" height="3.964"/>
-          <rect y="9.009" width="22.928" height="3.964"/>
-          <rect y="18.018" width="22.928" height="3.964"/>
-        </g>
-      </svg>
-      <svg class="header__nav-toggle__close" id="menu-close" fill="#ffffff" x="0px" y="0px" width="23.199px" height="22.199px" viewBox="0 0 22.199 22.199" enable-background="new 0 0 22.199 22.199" xml:space="preserve">
-        <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 "/>
-      </svg>
-    </button>
     <section class="intro intro--sub">
-      <h1 class="intro__caption">Sedona</h1>
+      <h1 class="visualy-hidden">Sedona</h1>
     </section>
   </section>
   <main class="main">
-    <section class="description">
-      <p class="description__title font-title font-title--big">Оставьте свой отзыв</p>
-      <p class="description__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+    <section class="description description--sub-size-m">
+      <p class="description__title description__title--big font-title">Оставьте свой отзыв</p>
+      <p class="description__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них,<br class="desktop-br"> а также о посещенных вами достопримечательностях</p>
     </section>
     <section class="form">
       <form class="get-feedback" action="https://echo.htmlacademy.ru" method="POST">
-        <div class="get-feedback__name">
-          <h2 class="form__title font-title form__border-top">Представьтесь:</h2>
-          <label class="form__label form__label--thin" for="name"><span class="form__label__text">Имя<sup>*</sup>:</span>
-            <input class="form__input form__input--size-m font-input" name="name" type="text" id="name" placeholder="Пётр">
-          </label>
-          <label class="form__label form__label--thin" for="surname"><span class="form__label-text">Фамилия<sup>*</sup>:</span>
-            <input class="form__input form__input--size-s font-input" name="sename" type="text" id="surname" placeholder="Иванов">
-          </label>
-          <label class="form__label form__label--thin" for="patronymiс"><span class="form__label__text">Отчество:</span>
-            <input class="form__input form__input--size-s font-input" name="patronymiс" type="text" id="patronymiс"  placeholder="Александорович">
-          </label>
-        </div>
-        <div class="get-feedback__contact">
-          <h2 class="form__title font-title form__border-top">Контактная информация:</h2>
-          <div class="get-feedback__contact-wrap">
-            <label class="form__label form__label--thin" for="phone">
-              <span class="form__label__text">Контактный телефон<sup>*</sup>:</span>
-              <input class="form__input form__input--size-m form__input--tablet font-input" name="phone" type="tel" id="phone" placeholder="Введите телефон" pattern="8|\+7?\d+">
+        <div class="get-feedback__name get-feedback__item">
+          <h2 class="form__title form__title--left font-title">Представьтесь:</h2>
+          <div class="get-feedback__item-wrap get-feedback__item-wrap--name">
+            <label class="form__label form__label--thin" for="name"><span class="form__label-text">Имя<sup>*</sup>:</span>
+              <input class="form__input form__input--size-m font-input" name="name" type="text" id="name" placeholder="Пётр" required>
             </label>
-            <label class="form__label form__label--thin" for="email">
-              <span class="form__label__text">Электронная почта<sup>*</sup>:</span>
-              <input class="form__input form__input--size-m form__input--tablet font-input" name="email" type="email" id="email" placeholder="Введите email" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,6}$">
+            <label class="form__label form__label--thin" for="surname"><span class="form__label-text">Фамилия<sup>*</sup>:</span>
+              <input class="form__input form__input--size-s font-input" name="sename" type="text" id="surname" placeholder="Иванов" required>
+            </label>
+            <label class="form__label form__label--thin" for="patronymiс"><span class="form__label-text">Отчество:</span>
+              <input class="form__input form__input--size-s font-input" name="patronymiс" type="text" id="patronymiс"  placeholder="Александорович">
             </label>
           </div>
         </div>
-        <div class="get-feedback__impression">
-          <h2 class="form__title form__title--left font-title form__border-top">Ваше общее впечатление:</h2>
-          <label class="form__label font-input" for="good">
-            <input class="form__radio" name="impression-good" type="radio" id="good" checked>
-            <span class="form__label__text">Скорее положительное</span>
-          </label>
-          <label class="form__label font-input" for="bad">
-            <input class="form__radio" name="impression-bad" type="radio" id="bad">
-            <span class="form__label__text">Скорее отрицательное</span>
-          </label>
-          <label class="form__label font-input" for="neutral">
-            <input class="form__radio" type="radio" id="neutral" name="impression-neutral">
-            <span class="form__label__text">Затрудняюсь ответить</span>
-          </label>
+        <div class="get-feedback__contact get-feedback__item">
+          <h2 class="form__title form__title--decoration font-title">Контактная информация:</h2>
+          <div class="get-feedback__item-wrap get-feedback__item-wrap--contact">
+            <label class="form__label form__label--column form__label--thin" for="phone">
+              <span class="form__label-text form__label-text--contact-phone form__label-text--desktop-off">Контактный телефон<sup>*</sup>:</span><span class="form__label-text form__label-text--contact-phone form__label-text--desktop">телефон<sup>*</sup>:</span>
+              <input class="form__input form__input--size-m form__input--tablet font-input" name="phone" type="tel" id="phone" placeholder="Введите телефон" pattern="8|\+7?\d+" required>
+            </label>
+            <label class="form__label form__label--column form__label--thin" for="email">
+              <span class="form__label-text form__label-text--contact-email">Электронная почта<sup>*</sup>:</span>
+              <input class="form__input form__input--size-m form__input--tablet font-input" name="email" type="email" id="email" placeholder="Введите email" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,6}$" required>
+            </label>
+          </div>
         </div>
-        <div class="get-feedback__visit">
-          <h2 class="form__title font-title form__border-top">Посещенные<br>достопримечательности:</h2>
-          <div class="get-feedback__visit-wrap">
+        <div class="get-feedback__impression get-feedback__item">
+          <h2 class="form__title font-title">Ваше общее впечатление:</h2>
+          <div class="get-feedback__item-wrap get-feedback__item-wrap--impression">
+            <label class="form__label font-input" for="good">
+              <input class="form__radio" name="impression" type="radio" value="impression-good" id="good" checked>
+              <span class="form__label-text form__label-text--radio">Скорее положительное</span>
+            </label>
+            <label class="form__label font-input" for="bad">
+              <input class="form__radio" name="impression" type="radio" value="impression-bad" id="bad">
+              <span class="form__label-text form__label-text--radio">Скорее отрицательное</span>
+            </label>
+            <label class="form__label font-input" for="neutral">
+              <input class="form__radio" type="radio" id="neutral" value="impression-neutral" name="impression">
+              <span class="form__label-text form__label-text--radio">Затрудняюсь ответить</span>
+            </label>
+          </div>
+        </div>
+        <div class="get-feedback__visit get-feedback__item">
+          <h2 class="form__title form__title--decoration font-title">Посещенные<br>достопримечательности:</h2>
+          <div class="get-feedback__item-wrap get-feedback__item-wrap--visit">
             <label class="form__label font-input" for="devil-bridge">
               <input class="form__checkbox" name="visit-devil-bridge" type="checkbox" id="devil-bridge" checked>
-              <span class="form__label__text">Мост Дьявола</span>
+              <span class="form__label-text form__label-text--checkbox">Мост Дьявола</span>
             </label>
             <label class="form__label font-input" for="mountain-bell">
-              <input class="form__checkbox" name="get-visit-mountain-bell" type="checkbox" id="mountain-bell">
-              <span class="form__label__text">Гора-Колокол</span>
+              <input class="form__checkbox" name="get-visit-mountain-bell" type="checkbox" id="mountain-bell" checked>
+              <span class="form__label-text form__label-text--checkbox">Гора-Колокол</span>
             </label>
             <label class="form__label font-input" for="slide-park">
-              <input class="form__checkbox" name="visit-slide-park" type="checkbox" id="slide-park">
-              <span class="form__label__text">Слайд-парк</span>
+              <input class="form__checkbox" name="visit-slide-park" type="checkbox" id="slide-park" checked>
+              <span class="form__label-text form__label-text--checkbox">Слайд-парк</span>
             </label>
             <label class="form__label font-input" for="red-rock">
               <input class="form__checkbox" name="visit-red-rock" type="checkbox" id="red-rock">
-              <span class="form__label__text">Красные скалы</span>
+              <span class="form__label-text form__label-text--checkbox">Красные скалы</span>
             </label>
           </div>
         </div>
-        <div class="get-feedback__feedback">
-          <h2 class="form__title font-title form__border-top">Опишите свои эмоции:</h2>
-            <input class="form__input form__input--comment font-input" type="text" name="comment" placeholder="Опишите подробно все свои восторги">
-          <button class="button get-feedback__request font-btn" type="submit">Отправить отзыв</button>
+        <div class="get-feedback__feedback get-feedback__item form__border-top">
+          <h2 class="form__title form__title--decoration  font-title">Опишите свои эмоции:</h2>
+            <textarea class="form__input form__input--comment font-input" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
+          <button class="button get-feedback__request font-btn button-disable" type="submit">Отправить отзыв</button>
           <p class="form__endnote"><sup>*</sup>- Обязательные поля</p>
         </div>
       </form>
     </section>
   </main>
-  <footer class="footer">
-    <div class="social">
+  <footer class="social">
       <h3 class="social__hashtag font-title">#visitsedona</h3>
       <ul class="social-list list-style-none">
         <li class="social-list__item" >
@@ -181,7 +150,20 @@
           </svg>
         </a>
       </p>
-    </div>
   </footer>
+  <section class="failure-pop-up failure-pop-up--visible">
+    <h2 class="failure-pop-up__title font-title font-title--big">Что-то пошло <br class="tablet-br">не так!</h2>
+    <p class="failure-pop-up__text">Проверьте поля выделенные красным, скорее всего вы забыли их заполнить.</p>
+    <button class="failure-pop-up__button button font-btn">Ok</button>
+  </section>
+  <section class="succes-pop-up succes-pop-up--visible">
+      <h2 class="succes-pop-up__title font-title font-title--big">Ваш отзыв отправлен!</h2>
+      <p class="succes-pop-up__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      <div class="succes-pop-up__button-wrap">
+        <button class="succes-pop-up__button button font-btn">Закрыть окно</button>
+      </div>
+  </section>
+  <script src="js/toggle-menu.js"></script>
+  <script src="js/pop-ap.js"></script>
 </body>
 </html>
