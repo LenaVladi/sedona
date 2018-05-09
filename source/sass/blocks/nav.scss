@@ -31,32 +31,40 @@
   color: #ffffff;
 }
 
-.nav__toggle-button {
-  position: absolute;
-  border: none;
-  background: url("../img/icon-cross.svg") no-repeat;
-  background-size: contain;
-  width: 24px;
-  height: 24px;
-  right: 20px;
-  top: 15px;
-  font-size: 0;
-}
+@media (max-width: $mobile-width-only) {
+  .nav__toggle-button {
+    position: absolute;
+    border: none;
+    outline: none;
+    background: url("../img/icon-cross.svg") no-repeat;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+    right: 20px;
+    top: 15px;
+    font-size: 0;
+  }
 
-.nav--closed .nav__toggle-button {
-  background: url("../img/icon-menu.svg") no-repeat;
-}
+  .nav--closed .nav__toggle-button {
+    background: url("../img/icon-menu.svg") no-repeat;
+    outline: none;
+  }
 
-.nav--closed .nav__item {
-  display: none;
-}
+  .nav--closed .nav__item {
+    display: none;
+  }
 
-.nav--closed .nav__item--logo {
-  display: block;
-}
+  .nav--closed .nav__item--logo {
+    display: block;
+  }
 
-.nav--not-js .nav__toggle-button {
-  display: none;
+  .nav--nojs .nav__toggle-button {
+    display: none;
+  }
+
+  .nav--nojs .nav__item {
+    display: block;
+  }
 }
 
 @media (min-width: $tablet-width) {
