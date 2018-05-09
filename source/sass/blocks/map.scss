@@ -6,6 +6,11 @@
   background-position: center;
 }
 
+.map iframe {
+  width: 100%;
+  border: none;
+}
+
 @media (min-width: $tablet-width) {
   .map {
     background-image: url("../img/bg-map-tablet@1x.jpg");

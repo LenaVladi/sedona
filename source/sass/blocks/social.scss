@@ -17,14 +17,10 @@
   height: 47px;
   background: $main-color;
   font-size: 0;
-}
 
-.social-list__item:hover {
-  background: $hover-color;
-}
-
-.social-list__item:active {
-  background: $down-color-bg;
+  &:active {
+    background: $down-color-bg;
+  }
 }
 
 .social-list__fb {
@@ -44,7 +40,6 @@
 @media (min-width: $tablet-width) {
   .social {
     width: 100%;
-    //padding: 32px 0;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -58,5 +53,9 @@
     height: 80px;
     padding: 0;
     justify-content: space-between;
+  }
+
+  .social-list__item:hover {
+    background: $hover-color;
   }
 }

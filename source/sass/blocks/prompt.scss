@@ -19,6 +19,17 @@
   margin-bottom: 20px;
 }
 
+.prompt__request {
+  &:active {
+    background-color: $down-color-bg;
+    color: $font-color-down;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .prompt {
     padding: 48px 0 62px;
@@ -70,5 +81,9 @@
   .prompt__request {
     margin: 0 auto;
     width: 459px;
+
+    &:hover {
+      background-color: $hover-color;
+    }
   }
 }

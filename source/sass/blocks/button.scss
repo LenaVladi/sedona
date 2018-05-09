@@ -1,13 +1,12 @@
 .button {
-  background: $main-color;
+  background-color: $main-color;
   color: #ffffff;
-  min-width: 240px;
   height: 58px;
   border: none;
 }
 
-@media (min-width: $tablet-width) {
-  .button {
-    min-width: 330px;
+@media (min-width: $desktop-width) {
+  .button:hover {
+    background-color: $hover-color;
   }
 }

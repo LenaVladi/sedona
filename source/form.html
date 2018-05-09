@@ -72,15 +72,15 @@
           <div class="get-feedback__item-wrap get-feedback__item-wrap--impression">
             <label class="form__label font-input" for="good">
               <input class="form__radio" name="impression" type="radio" value="impression-good" id="good" checked>
-              <span class="form__label-text--radio">Скорее положительное</span>
+              <span class="form__label-text form__label-text--radio">Скорее положительное</span>
             </label>
             <label class="form__label font-input" for="bad">
               <input class="form__radio" name="impression" type="radio" value="impression-bad" id="bad">
-              <span class="form__label-text--radio">Скорее отрицательное</span>
+              <span class="form__label-text form__label-text--radio">Скорее отрицательное</span>
             </label>
             <label class="form__label font-input" for="neutral">
               <input class="form__radio" type="radio" id="neutral" value="impression-neutral" name="impression">
-              <span class="form__label-text--radio">Затрудняюсь ответить</span>
+              <span class="form__label-text form__label-text--radio">Затрудняюсь ответить</span>
             </label>
           </div>
         </div>
@@ -107,8 +107,8 @@
         </div>
         <div class="get-feedback__feedback get-feedback__item form__border-top">
           <h2 class="form__title form__title--decoration  font-title">Опишите свои эмоции:</h2>
-            <textarea class="form__input form__input--comment font-input" type="text" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
-          <button class="button get-feedback__request font-btn" type="submit">Отправить отзыв</button>
+            <textarea class="form__input form__input--comment font-input" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
+          <button class="button get-feedback__request font-btn button-disable" type="submit">Отправить отзыв</button>
           <p class="form__endnote"><sup>*</sup>- Обязательные поля</p>
         </div>
       </form>
@@ -152,14 +152,16 @@
       </p>
   </footer>
   <section class="failure-pop-up failure-pop-up--visible">
-    <h2 class="failure-pop-up__title">Что-то пошло не так!</h2>
+    <h2 class="failure-pop-up__title font-title font-title--big">Что-то пошло <br class="tablet-br">не так!</h2>
     <p class="failure-pop-up__text">Проверьте поля выделенные красным, скорее всего вы забыли их заполнить.</p>
-    <button class="failure-pop-up__button">Ok</button>
+    <button class="failure-pop-up__button button font-btn">Ok</button>
   </section>
-  <section class="succes-pop-up succes-pop-up--visible">
-      <h2 class="succes-pop-up__title">Ваш отзыв отправлен!</h2>
+  <section class="succes-pop-up">
+      <h2 class="succes-pop-up__title font-title font-title--big">Ваш отзыв отправлен!</h2>
       <p class="succes-pop-up__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <button class="succes-pop-up__button">Закрыть окно</button>
+      <div class="succes-pop-up__button-wrap">
+        <button class="succes-pop-up__button button font-btn">Закрыть окно</button>
+      </div>
   </section>
 </body>
 </html>

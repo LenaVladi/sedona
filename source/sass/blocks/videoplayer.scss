@@ -40,19 +40,19 @@
   background: transparent;
 }
 
-.videoplayer__controls__replay {
+.videoplayer__controls-replay {
   position: absolute;
   top: 36%;
   left: 7%;
 }
 
-.videoplayer__controls__sub {
+.videoplayer__controls-sub {
   position: absolute;
   top: 36%;
   right: 24%;
 }
 
-.videoplayer__controls__fullscreen {
+.videoplayer__controls-fullscreen {
   position: absolute;
   top: 36%;
   right: 5%;
@@ -121,19 +121,43 @@
     }
   }
 
-  .videoplayer__controls__replay {
+  .videoplayer__controls-replay {
     left: 4%;
-    fill: $input-color-bg;
+    fill: $controls-color-btn--mobile;
+
+    &:active {
+      fill: $controls-color-btn--mobile-down;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 
-  .videoplayer__controls__sub {
+  .videoplayer__controls-sub {
     right: 14%;
-    fill: $input-color-bg;
+    fill: $controls-color-btn--mobile;
+
+    &:active {
+      fill: $controls-color-btn--mobile-down;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 
-  .videoplayer__controls__fullscreen {
+  .videoplayer__controls-fullscreen {
     right: 6%;
-    fill: $input-color-bg;
+    fill: $controls-color-btn--mobile;
+
+    &:active {
+      fill: $controls-color-btn--mobile-down;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .videoplayer__progress {
@@ -150,9 +174,33 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .progress__bar {
     width: 65%;
+  }
+
+  .videoplayer__controls-sub {
+    fill: $controls-color-btn;
+
+    &:active {
+      fill: $controls-color-btn--down;
+    }
+  }
+
+  .videoplayer__controls-fullscreen {
+    fill: $controls-color-btn;
+
+    &:active {
+      fill: $controls-color-btn--down;
+    }
+  }
+
+  .videoplayer__controls-replay {
+    fill: $controls-color-btn;
+
+    &:active {
+      fill: $controls-color-btn--down;
+    }
   }
 }
 
@@ -173,14 +221,26 @@
     }
   }
 
-  .videoplayer__controls__sub {
+  .videoplayer__controls-sub {
     right: 11%;
-    fill: $input-color-bg;
+
+    &:hover {
+      fill: $controls-color-btn--hover;
+    }
   }
 
-  .videoplayer__controls__fullscreen {
+  .videoplayer__controls-fullscreen {
     right: 5%;
-    fill: $input-color-bg;
+
+    &:hover {
+      fill: $controls-color-btn--hover;
+    }
+  }
+
+  .videoplayer__controls-replay {
+    &:hover {
+      fill: $controls-color-btn--hover;
+    }
   }
 
   .progress__value {

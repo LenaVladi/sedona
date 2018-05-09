@@ -57,6 +57,15 @@
   &__request {
     width: 100%;
     margin-top: 50px;
+
+    &:active {
+      background-color: $down-color-bg;
+      color: $font-color-down;
+    }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 
@@ -199,6 +208,10 @@
     &__request {
       margin-top: 25px;
       width: 480px;
+
+      &:hover {
+        background-color: $hover-color;
+      }
     }
   }
 }

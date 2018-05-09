@@ -18,10 +18,10 @@
     border-bottom: none;
     background-color: #ffffff;
   }
-}
 
-.nav__item:active {
-  background-color: $down-color-bg;
+  &:active {
+    background-color: $down-color-bg;
+  }
 }
 
 .nav__link {
@@ -95,7 +95,7 @@
   }
 
   .nav__item:active {
-    background-color: #ffffff;;
+    background-color: #ffffff;
   }
 
   .nav__link {
