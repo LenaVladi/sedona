@@ -10,6 +10,10 @@
   bottom: -12px;
 }
 
+.author__link-svg:active {
+  fill: $color-down;
+}
+
 @media (min-width: $tablet-width) {
   .author {
     margin-top: 9px;
@@ -19,5 +23,9 @@
 @media (min-width: $desktop-width) {
   .author {
     margin-top: 10px;
+  }
+
+  .author__link-svg:hover {
+    fill: $main-color;
   }
 }

@@ -21,7 +21,7 @@
 .videoplayer__controls {
   position: relative;
   height: 65px;
-  background: $input-color;
+  background: $input-color-bg;
 
   &--wrap {
     position: absolute;
@@ -123,17 +123,17 @@
 
   .videoplayer__controls__replay {
     left: 4%;
-    fill: $input-color;
+    fill: $input-color-bg;
   }
 
   .videoplayer__controls__sub {
     right: 14%;
-    fill: $input-color;
+    fill: $input-color-bg;
   }
 
   .videoplayer__controls__fullscreen {
     right: 6%;
-    fill: $input-color;
+    fill: $input-color-bg;
   }
 
   .videoplayer__progress {
@@ -175,12 +175,12 @@
 
   .videoplayer__controls__sub {
     right: 11%;
-    fill: $input-color;
+    fill: $input-color-bg;
   }
 
   .videoplayer__controls__fullscreen {
     right: 5%;
-    fill: $input-color;
+    fill: $input-color-bg;
   }
 
   .progress__value {

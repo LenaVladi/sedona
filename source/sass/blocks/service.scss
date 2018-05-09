@@ -9,8 +9,12 @@
 }
 
 .service__item {
-  position: relative;
   height: 130px;
+}
+
+.service__title {
+  margin: 30px 0 0 0;
+  position: relative;
 
   &--food {
     &::before {
@@ -20,7 +24,7 @@
       display: block;
       position: absolute;
       left: -50px;
-      top: 30px;
+      top: -5px;
       background: url("../img/icon-burger.svg") no-repeat;
       background-size: contain;
     }
@@ -34,7 +38,7 @@
       display: block;
       position: absolute;
       left: -50px;
-      top: 20px;
+      top: -10px;
       background: url("../img/icon-house.svg") no-repeat;
       background-size: contain;
     }
@@ -47,16 +51,13 @@
       height: 40px;
       display: block;
       position: absolute;
-      left: -50px;
-      top: 20px;
+      left: -47px;
+      top: -13px;
       background: url("../img/icon-gift.svg") no-repeat;
       background-size: contain;
     }
   }
-}
 
-.service__title {
-  margin: 30px 0 0 0;
 }
 
 .service__text {
@@ -85,13 +86,17 @@
     &--pos1 {
       order: 1;
     }
+  }
+
+  .service__title {
+    margin: 10px 0 10px 0;
 
     &--food {
       &::before {
         width: 80px;
         height: 80px;
-        left: 85px;
-        top: 60px;
+        left: -40%;
+        top: -100px;
       }
     }
 
@@ -99,8 +104,8 @@
       &::before {
         width: 80px;
         height: 85px;
-        left: 90px;
-        top: 59px;
+        left: -13%;
+        top: -105px;
       }
     }
 
@@ -108,14 +113,10 @@
       &::before {
         width: 80px;
         height: 80px;
-        left: 92px;
-        top: 56px;
+        left: 12%;
+        top: -106px;
       }
     }
-  }
-
-  .service__title {
-    margin: 10px 0 10px 0;
   }
 
   .service__text {
@@ -129,33 +130,6 @@
     height: 331px;
     width: 400px;
     padding: 135px 40px 0 40px;
-
-    &--food {
-      &::before {
-        width: 80px;
-        height: 80px;
-        left: 160px;
-        top: 62px;
-      }
-    }
-
-    &--house {
-      &::before {
-        width: 80px;
-        height: 85px;
-        left: 160px;
-        top: 60px;
-      }
-    }
-
-    &--souvenir {
-      &::before {
-        width: 80px;
-        height: 80px;
-        left: 170px;
-        top: 56px;
-      }
-    }
   }
 
   .service__title {

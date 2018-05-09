@@ -1,32 +1,28 @@
 $main-color: #81b3d2;
 $hover-color: #669ec0;
-$down-color: #5496bd;
-
+$down-color-bg: #5496bd;
 $dsiabled-color: #e5e5e5;
-
 $lightgray: #eeeeee;
+$color-down: #b2b2b2;
 
-$font-color--main: #000000;
 $font-color--input: #333333;
-$font-color-down--btn: #94b9d2;
-$font-color-down--menu: #cacaca;
+$font-color-down: #88b6d1;
+
 $font-color-hover--menu: $main-color;
 $font-menu-active: #766357;
 $font-menu-active-hover: #604e43;
-$font-menu-active-down: #dbd8d5;
+$font-menu-active-down: #d6d0cc;
 
-$logo-down: #b2b2b2;
-
-$input-color: #f2f2f2;
-$input-color--hover: $dsiabled-color;
-$input-color--active: $dsiabled-color;
-$input-color--down: #d5d5d5;
+$input-color-bg: #f2f2f2;
+$input--hover-bg: #e5e5e5;
+$input--active-border: #e5e5e5;
+$input--down: #d5d5d5;
 
 $controls-color: #666666;
 $controls-color-btn: #ffffff;
 $controls-color-btn--hover: #c2c2c2;
 $controls-color-btn--down: #949494;
-$controls-color--mobile: $input-color;
+$controls-color--mobile: #f2f2f2;
 $controls-color-btn--mobile: #5c6870;
 $controls-color-btn--mobile-hover: $font-color--input;
 $controls-color-btn--mobile-down: #b8b8b8;

@@ -16,8 +16,12 @@
   &--logo {
     box-shadow: 0 -3px 5px rgba(51, 51, 51, 0.1);
     border-bottom: none;
-    background: #ffffff;
+    background-color: #ffffff;
   }
+}
+
+.nav__item:active {
+  background-color: $down-color-bg;
 }
 
 .nav__link {
@@ -55,7 +59,7 @@
 
 @media (min-width: $tablet-width) {
   .nav {
-    background: #ffffff;
+    background-color: #ffffff;
   }
 
   .nav__toggle-button {
@@ -90,13 +94,37 @@
     }
   }
 
+  .nav__item:active {
+    background-color: #ffffff;;
+  }
+
   .nav__link {
     color: black;
+  }
+
+  .nav__link:active {
+    color: $color-down;
+  }
+
+  .nav__active .nav__link {
+    color: $font-menu-active;
+  }
+
+  .nav__active .nav__link:active {
+    color: $font-menu-active-down;
   }
 }
 
 @media (min-width: $desktop-width) {
   .nav__item {
     min-width: 202px;
+  }
+
+  .nav__link:hover {
+    color: $main-color;
+  }
+
+  .nav__active .nav__link:hover {
+    color: $font-menu-active-hover;
   }
 }
