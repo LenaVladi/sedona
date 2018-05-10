@@ -328,6 +328,8 @@
 
   .form__label-text {
     &--contact-phone {
+      padding: 0;
+
       &::after {
         top: 0;
       }
