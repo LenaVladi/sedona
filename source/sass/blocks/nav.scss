@@ -24,11 +24,19 @@
   &:active {
     background-color: $down-color-bg;
   }
+
+  &:active .nav__link {
+    color: $font-color-down;
+  }
 }
 
 .nav__link {
   text-decoration: none;
   color: #ffffff;
+}
+
+.nav__active {
+  background-color: $hover-color;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -103,18 +111,26 @@
       position: static;
       box-shadow: none;
     }
-  }
 
-  .nav__item:active {
-    background-color: #ffffff;
+    &:active {
+      background-color: #ffffff;
+    }
+
+    &:active .nav__link {
+      color: $color-down;
+    }
   }
 
   .nav__link {
     color: black;
   }
 
-  .nav__link:active {
-    color: $color-down;
+  .nav__active {
+    background-color: #ffffff;
+
+    &:active .nav__link {
+      color: $color-down;
+    }
   }
 
   .nav__active .nav__link {
