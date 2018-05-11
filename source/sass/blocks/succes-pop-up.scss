@@ -1,9 +1,9 @@
 .succes-pop-up {
   position: fixed;
   width: 320px;
+  top: calc(50vh - 140px); // минус половина высоты
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin-left: -160px; // минус половина ширины
   padding: 35px 0 0;
   box-shadow: 0 0 10px rgba(51, 51, 51, 0.2);
   background-color: #ffffff;
@@ -37,6 +37,8 @@
     width: 639px;
     height: 300px;
     padding: 35px 0 0;
+    top: calc(50vh - 150px);
+    margin-left: -315px;
   }
 
   .succes-pop-up__text {

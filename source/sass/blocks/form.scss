@@ -23,7 +23,7 @@
   }
 
   &--check:active .form__checkbox:checked + .form__label-text--checkbox::after {
-    fill: #a4a4a4;
+    color: #a4a4a4;
   }
 
   &--check:active .form__label-text--checkbox::before {
