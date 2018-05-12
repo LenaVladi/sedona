@@ -1,25 +1,22 @@
-.videoplayer {
+.videoplayer__wrap {
+  margin: 0 auto;
   width: 100%;
+  position: relative;
   min-height: 201px;
+  background-image: url("../img/video-mobile@1x.jpg");
+  background-size: cover;
 
-  &__wrap {
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-    min-height: 201px;
-    background-image: url("../img/video-mobile@1x.jpg");
-    background-size: cover;
-
-    @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-      background-image: url("../img/video-mobile@2x.jpg");
-    }
+  @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+    background-image: url("../img/video-mobile@2x.jpg");
   }
 }
 
-.videoplayer__picture-none {
-  height: 0;
+.videoplayer {
+  width: 100%;
+  min-height: 201px;
 }
 
+//меню контрола и кнопки управления
 .videoplayer__controls {
   position: relative;
   height: 65px;
@@ -46,20 +43,45 @@
   position: absolute;
   top: 36%;
   left: 7%;
+
+  &:hover {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: #b8b8b8;
+  }
 }
 
 .videoplayer__controls-sub {
   position: absolute;
   top: 36%;
   right: 24%;
+
+  &:hover {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: #b8b8b8;
+  }
 }
 
 .videoplayer__controls-fullscreen {
   position: absolute;
   top: 36%;
   right: 5%;
+
+  &:hover {
+    fill: #333333;
+  }
+
+  &:active {
+    fill: #b8b8b8;
+  }
 }
 
+//полоса прогресса и её значения
 .videoplayer__progress {
   position: relative;
   height: 45px;
@@ -90,22 +112,36 @@
 }
 
 @media (min-width: $tablet-width) {
+  .videoplayer__wrap {
+    width: 650px;
+    height: 500px;
+    background-image: url("../img/video-tablet@1x.jpg");
+    background-size: cover;
+
+    @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+      background-image: url("../img/video-tablet@2x.jpg");
+    }
+  }
+
   .videoplayer {
     width: 100%;
     min-height: 455px;
     margin: 0 auto;
     padding-bottom: 45px;
+  }
 
-    &__wrap {
-      width: 650px;
-      height: 500px;
-      background-image: url("../img/video-tablet@1x.jpg");
-      background-size: cover;
+  .videoplayer__progress {
+    height: 100%;
+  }
 
-      @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-        background-image: url("../img/video-tablet@2x.jpg");
-      }
-    }
+  .progress__bar {
+    width: 65%;
+    top: 47%;
+  }
+
+  .progress__value {
+    left: 32%;
+    top: 44%;
   }
 
   .videoplayer__controls {
@@ -125,102 +161,67 @@
 
   .videoplayer__controls-replay {
     left: 4%;
-    fill: $controls-color-btn--mobile;
+    fill: $controls-color-btn;
 
-    &:active {
-      fill: $controls-color-btn--mobile-down;
+    &:hover {
+      fill: #c2c2c2;
     }
 
-    &:focus {
-      outline: none;
+    &:active {
+      fill: #949494;
     }
   }
 
   .videoplayer__controls-sub {
     right: 14%;
-    fill: $controls-color-btn--mobile;
+    fill: $controls-color-btn;
 
-    &:active {
-      fill: $controls-color-btn--mobile-down;
+    &:hover {
+      fill: #c2c2c2;
     }
 
-    &:focus {
-      outline: none;
+    &:active {
+      fill: #949494;
     }
   }
 
   .videoplayer__controls-fullscreen {
     right: 6%;
-    fill: $controls-color-btn--mobile;
-
-    &:active {
-      fill: $controls-color-btn--mobile-down;
-    }
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  .videoplayer__progress {
-    height: 100%;
-  }
-
-  .progress__bar {
-    top: 47%;
-  }
-
-  .progress__value {
-    left: 32%;
-    top: 44%;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .progress__bar {
-    width: 65%;
-  }
-
-  .videoplayer__controls-sub {
     fill: $controls-color-btn;
 
-    &:active {
-      fill: $controls-color-btn--down;
+    &:hover {
+      fill: #c2c2c2;
     }
-  }
-
-  .videoplayer__controls-fullscreen {
-    fill: $controls-color-btn;
 
     &:active {
-      fill: $controls-color-btn--down;
-    }
-  }
-
-  .videoplayer__controls-replay {
-    fill: $controls-color-btn;
-
-    &:active {
-      fill: $controls-color-btn--down;
+      fill: #949494;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .videoplayer__wrap {
+    width: 100%;
+    min-height: 451px;
+    background-image: url("../img/video-desktop@1x.jpg");
+    background-size: contain;
+
+    @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
+      background-image: url("../img/video-desktop@2x.jpg");
+    }
+  }
+
   .videoplayer {
     margin-bottom: 40px;
     width: 800px;
+  }
 
-    &__wrap {
-      width: 100%;
-      min-height: 451px;
-      background-image: url("../img/video-desktop@1x.jpg");
-      background-size: contain;
+  .progress__value {
+    left: 26%;
+  }
 
-      @media (min-resolution: 1.5dppx), (min-resolution: 144dpi) {
-        background-image: url("../img/video-desktop@2x.jpg");
-      }
-    }
+  .progress__bar {
+    width: 70%;
   }
 
   .videoplayer__controls-sub {
@@ -243,13 +244,5 @@
     &:hover {
       fill: $controls-color-btn--hover;
     }
-  }
-
-  .progress__value {
-    left: 26%;
-  }
-
-  .progress__bar {
-    width: 70%;
   }
 }

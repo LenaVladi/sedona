@@ -22,12 +22,20 @@
     line-height: 21px;
   }
 
-  &--check:active .form__checkbox:checked + .form__label-text--checkbox::after {
+  &--check:hover .form__label-text--checkbox::before {
+    background-color: $input--hover-bg;
+  }
+
+  &--check:active .form__checkbox:checked .form__label-text--checkbox::after {
     color: #a4a4a4;
   }
 
   &--check:active .form__label-text--checkbox::before {
     background-color: $input--down;
+  }
+
+  &--check:hover .form__label-text--radio::before {
+    background-color: $input--hover-bg;
   }
 
   &--check:active .form__radio:checked + .form__label-text--radio::after {
@@ -135,6 +143,16 @@
   &--comment {
     width: 100%;
     height: 159px;
+  }
+
+  &:hover {
+    background-color: $input--hover-bg;
+  }
+
+  &:active {
+    outline: none;
+    background-color: #ffffff;
+    border: 3px solid $input--active-border;
   }
 
   &:focus {
@@ -302,14 +320,6 @@
       line-height: 59px;
       flex-direction: row;
     }
-
-    &--check:hover .form__label-text--checkbox::before {
-      background-color: $input--hover-bg;
-    }
-
-    &--check:hover .form__label-text--radio::before {
-      background-color: $input--hover-bg;
-    }
   }
 
   .form__input {
@@ -323,10 +333,6 @@
 
     &--tablet {
       width: 320px;
-    }
-
-    &:hover {
-      background-color: $input--hover-bg;
     }
   }
 
