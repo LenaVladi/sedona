@@ -21,6 +21,10 @@
   &:active {
     background: $down-color-bg;
   }
+
+  &:active .social-list__svg {
+    fill: $font-color-down;
+  }
 }
 
 .social-list__fb {

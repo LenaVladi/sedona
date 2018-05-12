@@ -21,6 +21,22 @@
     flex-direction: column;
     line-height: 21px;
   }
+
+  &--check:active .form__checkbox:checked + .form__label-text--checkbox::after {
+    color: #a4a4a4;
+  }
+
+  &--check:active .form__label-text--checkbox::before {
+    background-color: $input--down;
+  }
+
+  &--check:active .form__radio:checked + .form__label-text--radio::after {
+    background-color: #a4a4a4;
+  }
+
+  &--check:active .form__label-text--radio::before {
+    background-color: $input--down;
+  }
 }
 
 .form__label-text {
@@ -286,6 +302,14 @@
       line-height: 59px;
       flex-direction: row;
     }
+
+    &--check:hover .form__label-text--checkbox::before {
+      background-color: $input--hover-bg;
+    }
+
+    &--check:hover .form__label-text--radio::before {
+      background-color: $input--hover-bg;
+    }
   }
 
   .form__input {
@@ -328,6 +352,8 @@
 
   .form__label-text {
     &--contact-phone {
+      padding: 0;
+
       &::after {
         top: 0;
       }
