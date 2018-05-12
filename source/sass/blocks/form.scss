@@ -160,6 +160,14 @@
     background-color: #ffffff;
     border: 3px solid $input--active-border;
   }
+
+  &:focus:required:invalid {
+    border: 3px solid #f89779;
+  }
+
+  &:focus:required:valid {
+    border: 3px solid #67ca81;
+  }
 }
 
 .form__radio {
