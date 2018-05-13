@@ -11,7 +11,7 @@
 
 .form__label {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: relative;
   height: 60px;
   line-height: 55px;
@@ -48,7 +48,6 @@
 }
 
 .form__label-text {
-  display: inline-block;
   margin-right: 15px;
 
   &--desktop {
