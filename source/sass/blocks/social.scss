@@ -18,6 +18,10 @@
   background: $main-color;
   font-size: 0;
 
+  &:hover {
+    background: $hover-color;
+  }
+
   &:active {
     background: $down-color-bg;
   }
@@ -54,9 +58,5 @@
     height: 80px;
     padding: 0;
     justify-content: space-between;
-  }
-
-  .social-list__item:hover {
-    background: $hover-color;
   }
 }

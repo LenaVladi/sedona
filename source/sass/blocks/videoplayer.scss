@@ -34,11 +34,6 @@
   }
 }
 
-.controls__btn {
-  border: none;
-  background: transparent;
-}
-
 .videoplayer__controls-replay {
   position: absolute;
   top: 36%;
@@ -89,28 +84,6 @@
   opacity: 0.8;
 }
 
-.progress__value {
-  position: absolute;
-  top: 42%;
-  left: 22%;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #ffffff;
-  z-index: 2;
-}
-
-.progress__bar {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  width: 80%;
-  height: 3px;
-  background: #ffffff;
-  opacity: 0.3;
-  z-index: 1;
-}
-
 @media (min-width: $tablet-width) {
   .videoplayer__wrap {
     width: 650px;
@@ -132,16 +105,6 @@
 
   .videoplayer__progress {
     height: 100%;
-  }
-
-  .progress__bar {
-    width: 65%;
-    top: 47%;
-  }
-
-  .progress__value {
-    left: 32%;
-    top: 44%;
   }
 
   .videoplayer__controls {
@@ -215,14 +178,6 @@
   .videoplayer {
     margin-bottom: 40px;
     width: 800px;
-  }
-
-  .progress__value {
-    left: 26%;
-  }
-
-  .progress__bar {
-    width: 70%;
   }
 
   .videoplayer__controls-sub {

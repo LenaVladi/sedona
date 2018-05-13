@@ -15,19 +15,19 @@
   }
 }
 
+.media__photo-wrap {
+  margin: 0;
+  height: 281px;
+  margin-bottom: 20px;
+  contain: content;
+
+  &--big {
+    margin: 0;
+  }
+}
+
 .media__photo {
   width: 100%;
-
-  &-wrap {
-    margin: 0;
-    height: 281px;
-    margin-bottom: 20px;
-    contain: content;
-
-    &--big {
-      margin: 0;
-    }
-  }
 }
 
 .media__description {
@@ -87,13 +87,11 @@
     }
   }
 
-  .media__photo {
-    &-wrap {
-      height: 270px;
-      margin: 0;
-    }
+  .media__photo-wrap {
+    height: 270px;
+    margin: 0;
 
-    &-wrap--big {
+    &--big {
       height: 399px;
     }
   }

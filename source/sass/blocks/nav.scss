@@ -128,6 +128,14 @@
     color: black;
   }
 
+  .nav__link:hover {
+    color: $main-color;
+  }
+
+  .nav__active .nav__link:hover {
+    color: $font-menu-active-hover;
+  }
+
   .nav__active {
     background-color: #ffffff;
 
@@ -148,13 +156,5 @@
 @media (min-width: $desktop-width) {
   .nav__item {
     min-width: 202px;
-  }
-
-  .nav__link:hover {
-    color: $main-color;
-  }
-
-  .nav__active .nav__link:hover {
-    color: $font-menu-active-hover;
   }
 }

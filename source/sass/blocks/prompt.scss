@@ -22,6 +22,10 @@
 .prompt__request {
   line-height: 58px;
 
+  &:hover {
+    background-color: $hover-color;
+  }
+
   &:active {
     background-color: $down-color-bg;
     color: $font-color-down;
@@ -83,9 +87,5 @@
   .prompt__request {
     margin: 0 auto;
     width: 459px;
-
-    &:hover {
-      background-color: $hover-color;
-    }
   }
 }

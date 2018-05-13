@@ -1,4 +1,4 @@
-.succes-pop-up {
+.success-pop-up {
   position: fixed;
   width: 320px;
   height: 320px;
@@ -16,12 +16,12 @@
   }
 }
 
-.succes-pop-up__text {
+.success-pop-up__text {
   padding: 0 40px;
   margin: 30px 0;
 }
 
-.succes-pop-up__button-wrap {
+.success-pop-up__button-wrap {
   margin: 0;
   width: 100%;
   height: 99px;
@@ -29,12 +29,12 @@
   background-color: $lightgray;
 }
 
-.succes-pop-up__button {
+.success-pop-up__button {
   width: 280px;
 }
 
 @media (min-width: $tablet-width) {
-  .succes-pop-up {
+  .success-pop-up {
     width: 639px;
     height: 300px;
     padding: 35px 0 0;
@@ -42,27 +42,27 @@
     margin-left: -315px;
   }
 
-  .succes-pop-up__text {
+  .success-pop-up__text {
     padding: 0 100px;
   }
 
-  .succes-pop-up__button-wrap {
+  .success-pop-up__button-wrap {
     padding: 45px 0;
     height: 149px;
   }
 
-  .succes-pop-up__button {
+  .success-pop-up__button {
     width: 456px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .succes-pop-up {
+  .success-pop-up {
     width: 639px;
     height: 350px;
   }
 
-  .succes-pop-up__button {
+  .success-pop-up__button {
     width: 456px;
 
     &:hover {

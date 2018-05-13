@@ -1,6 +1,4 @@
 @import "../../node_modules/normalize.css/normalize";
-@import "mixins/font-family";
-@import "mixins/font-main";
 @import "variables";
 @import "scaffolding";
 @import "blocks/font-title";
@@ -23,13 +21,13 @@
 @import "blocks/social";
 @import "blocks/tablet-br";
 @import "blocks/failure-pop-up";
-@import "blocks/succes-pop-up";
+@import "blocks/success-pop-up";
 @import "blocks/get-feedback";
 @import "blocks/map";
 @import "blocks/media";
 @import "blocks/videoplayer";
+@import "blocks/progress";
 @import "blocks/controls";
 @import "blocks/form";
 @import "blocks/author";
 @import "blocks/button-disable";
-@import "blocks/footer";
