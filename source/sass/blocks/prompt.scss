@@ -20,6 +20,8 @@
 }
 
 .prompt__request {
+  line-height: 58px;
+
   &:active {
     background-color: $down-color-bg;
     color: $font-color-down;

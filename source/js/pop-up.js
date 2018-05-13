@@ -18,7 +18,7 @@ let ok = [];
 //подписка за событие о заполнении инпутов
 Array.from(inputs).forEach(el => {
   el.addEventListener('change', () => {
-    if (ok.length > 2) {
+    if (ok.length == 3) {
       btn.classList.remove('button-disable');
     } else {
       ok.push(el);
@@ -28,11 +28,11 @@ Array.from(inputs).forEach(el => {
 
 //обработка клика отправки формы -> показ модальных окон
 btn.addEventListener('click', (event) => {
-  event.preventDefault();
+  //event.preventDefault();
   if (btn.classList.contains('button-disable')) {
     return;
   } else {
-    const err = Array.from(inputs).find(el => el.textContent == '');
+    const err = Array.from(inputs).find(el => el.value == '');
 
     if (err) {
       failurePopUp.classList.add('failure-pop-up--visible');

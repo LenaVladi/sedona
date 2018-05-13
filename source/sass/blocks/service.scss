@@ -25,7 +25,8 @@
       position: absolute;
       left: -50px;
       top: -5px;
-      background: url("../img/icon-burger.svg") no-repeat;
+      background-image: url("../img/icon-burger.svg");
+      background-repeat: no-repeat;
       background-size: contain;
     }
   }
@@ -39,7 +40,8 @@
       position: absolute;
       left: -50px;
       top: -10px;
-      background: url("../img/icon-house.svg") no-repeat;
+      background-image: url("../img/icon-house.svg");
+      background-repeat: no-repeat;
       background-size: contain;
     }
   }
@@ -53,7 +55,8 @@
       position: absolute;
       left: -47px;
       top: -13px;
-      background: url("../img/icon-gift.svg") no-repeat;
+      background-image: url("../img/icon-gift.svg");
+      background-repeat: no-repeat;
       background-size: contain;
     }
   }
@@ -73,14 +76,9 @@
   }
 
   .service__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     padding: 150px 40px 0 40px;
     min-width: 256px;
     height: 330px;
-    flex: 1, 0, 30%;
 
     &--pos1 {
       order: 1;
@@ -89,12 +87,13 @@
 
   .service__title {
     margin: 10px 0 10px 0;
+    text-align: center;
 
     &--food {
       &::before {
         width: 80px;
         height: 80px;
-        left: -40%;
+        left: calc(50% - 40px);
         top: -100px;
       }
     }
@@ -103,7 +102,7 @@
       &::before {
         width: 80px;
         height: 85px;
-        left: -13%;
+        left: calc(50% - 40px);
         top: -105px;
       }
     }
@@ -112,7 +111,7 @@
       &::before {
         width: 80px;
         height: 80px;
-        left: 12%;
+        left: calc(50% - 40px);
         top: -106px;
       }
     }
@@ -137,5 +136,6 @@
 
   .service__text {
     padding: 0 15px;
+    margin: 20px 0 0;
   }
 }
