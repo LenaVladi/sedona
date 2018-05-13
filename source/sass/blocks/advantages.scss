@@ -9,3 +9,9 @@
     padding-top: 0;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    width: 100%;
+  }
+}
