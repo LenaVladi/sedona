@@ -200,6 +200,19 @@
   opacity: 0;
 }
 
+// .form__checkbox-tick {
+//   width: 22px;
+//   height: 22px;
+//   position: absolute;
+//   bottom: 22px;
+//   left: 16px;
+//   display: none;
+// }
+
+// .form__checkbox:checked .form__checkbox-tick {
+//   display: inline;
+// }
+
 .form__checkbox:checked + .form__label-text--checkbox::after {
   content: "";
   position: absolute;

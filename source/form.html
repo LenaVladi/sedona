@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
   <title>Форма отзыва</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.1/picturefill.min.js"></script>
 </head>
 <body>
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <section class="header">
     <nav class="nav nav--nojs font-menu">
       <ul class="nav__list list-style-none">
@@ -44,13 +47,13 @@
           <h2 class="form__title form__title--left font-title">Представьтесь:</h2>
           <div class="get-feedback__item-wrap get-feedback__item-wrap--name">
             <label class="form__label form__label--thin" for="name"><span class="form__label-text">Имя<sup>*</sup>:</span>
-              <input class="form__input form__input--size-m font-input" name="name" type="text" id="name" placeholder="Пётр" autofocus required>
+              <input class="form__input form__input--size-m font-input" name="name" type="text" id="name" placeholder="Пётр" autofocus="" required="">
             </label>
             <label class="form__label form__label--thin" for="surname"><span class="form__label-text">Фамилия<sup>*</sup>:</span>
-              <input class="form__input form__input--size-s font-input" name="sename" type="text" id="surname" placeholder="Иванов" required>
+              <input class="form__input form__input--size-s font-input" name="sename" type="text" id="surname" placeholder="Иванов" required="">
             </label>
             <label class="form__label form__label--thin" for="patronymiс"><span class="form__label-text">Отчество:</span>
-              <input class="form__input form__input--size-s font-input" name="patronymiс" type="text" id="patronymiс"  placeholder="Александорович">
+              <input class="form__input form__input--size-s font-input" name="patronymiс" type="text" id="patronymiс" placeholder="Александорович">
             </label>
           </div>
         </div>
@@ -59,11 +62,11 @@
           <div class="get-feedback__item-wrap get-feedback__item-wrap--contact">
             <label class="form__label form__label--column form__label--thin" for="phone">
               <span class="form__label-text form__label-text--contact-phone form__label-text--desktop-off">Контактный телефон<sup>*</sup>:</span><span class="form__label-text form__label-text--contact-phone form__label-text--desktop">телефон<sup>*</sup>:</span>
-              <input class="form__input form__input--size-m form__input--tablet font-input" name="phone" type="tel" id="phone" placeholder="Введите телефон" pattern="8|\+7?\d+" required>
+              <input class="form__input form__input--size-m form__input--tablet font-input" name="phone" type="tel" id="phone" placeholder="Введите телефон" required="">
             </label>
             <label class="form__label form__label--column form__label--thin" for="email">
               <span class="form__label-text form__label-text--contact-email">Электронная почта<sup>*</sup>:</span>
-              <input class="form__input form__input--size-m form__input--tablet font-input" name="email" type="email" id="email" placeholder="Введите email" required>
+              <input class="form__input form__input--size-m form__input--tablet font-input" name="email" type="email" id="email" placeholder="Введите email" required="">
             </label>
           </div>
         </div>
@@ -71,7 +74,7 @@
           <h2 class="form__title font-title">Ваше общее впечатление:</h2>
           <div class="get-feedback__item-wrap get-feedback__item-wrap--impression">
             <label class="form__label form__label--check font-input" for="good">
-              <input class="form__radio" name="impression" type="radio" value="impression-good" id="good" checked>
+              <input class="form__radio" name="impression" type="radio" value="impression-good" id="good" checked="">
               <span class="form__label-text form__label-text--radio">Скорее положительное</span>
             </label>
             <label class="form__label form__label--check font-input" for="bad">
@@ -88,15 +91,18 @@
           <h2 class="form__title form__title--decoration font-title">Посещенные<br>достопримечательности:</h2>
           <div class="get-feedback__item-wrap get-feedback__item-wrap--visit">
             <label class="form__label form__label--check font-input" for="devil-bridge">
-              <input class="form__checkbox" name="visit-devil-bridge" type="checkbox" id="devil-bridge" checked>
+              <input class="form__checkbox" name="visit-devil-bridge" type="checkbox" id="devil-bridge" checked="">
               <span class="form__label-text form__label-text--checkbox">Мост Дьявола</span>
+              <!-- <svg class="form__checkbox-tick">
+                <use xlink:href="#icon-tick"></use>
+              </svg> -->
             </label>
             <label class="form__label form__label--check font-input" for="mountain-bell">
-              <input class="form__checkbox" name="get-visit-mountain-bell" type="checkbox" id="mountain-bell" checked>
+              <input class="form__checkbox" name="get-visit-mountain-bell" type="checkbox" id="mountain-bell" checked="">
               <span class="form__label-text form__label-text--checkbox">Гора-Колокол</span>
             </label>
             <label class="form__label form__label--check font-input" for="slide-park">
-              <input class="form__checkbox" name="visit-slide-park" type="checkbox" id="slide-park" checked>
+              <input class="form__checkbox" name="visit-slide-park" type="checkbox" id="slide-park" checked="">
               <span class="form__label-text form__label-text--checkbox">Слайд-парк</span>
             </label>
             <label class="form__label form__label--check font-input" for="red-rock">
@@ -117,36 +123,32 @@
   <footer class="social">
     <h3 class="social__hashtag font-title">#visitsedona</h3>
     <ul class="social-list list-style-none">
-      <li class="social-list__item" >
+      <li class="social-list__item">
         <a class="social-list__twitter" href="#">twitter
-          <svg class="social-list__svg" id="Layer_1" x="0px" y="0px" width="40%" fill="#ffffff" height="19px"  viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
-            <g id="W6EeEF_1_">
-              <g>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.484,3.074,0.264,3.685,1.15 c0.694-0.225,1.372-0.47,2.072-0.69c-0.004,0.841-0.538,1.478-0.883,1.728C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.977-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.319,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.655,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.788,11.283,0.153z"/>
-              </g>
-            </g>
+          <svg class="social-list__svg" width="40%" height="19px">
+            <use xlink:href="#icon-twitter"></use>
           </svg>
         </a>
       </li>
-      <li class="social-list__item" >
+      <li class="social-list__item">
         <a class="social-list__fb" href="#">facebook
-          <svg class="social-list__svg" id="social-fb" x="0" y="20px" width="40%" fill="#ffffff" height="19px"  enable-background="new 0 0 8.672 18.944" xml:space="preserve">
-            <path d="M6.275,3.356c0.799,0,1.599,0,2.398,0c0-1.119,0-2.237,0-3.356c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.114 H0v3.518h1.959c0,3.104,0,6.208,0,9.312c1.279,0,2.559,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.114H5.787 C5.765,5.069,5.75,3.709,6.275,3.356z"/>
+          <svg class="social-list__svg" width="20%" height="19px">
+            <use xlink:href="#icon-facebook"></use>
           </svg>
         </a>
       </li>
-      <li class="social-list__item" >
+      <li class="social-list__item">
         <a class="social-list__youtube" href="#">youtube
-          <svg class="social-list__svg" id="social-yb" x="0px" y="0px" width="40%" fill="#ffffff" height="19px" viewBox="0 0 19.979 14.015" enable-background="new 0 0 19.979 14.015" xml:space="preserve">
-            <path d="M17.145,0H2.835C1.275,0,0,1.275,0,2.835v8.345c0,1.56,1.275,2.835,2.835,2.835h14.31c1.56,0,2.835-1.275,2.835-2.835V2.835 C19.979,1.275,18.704,0,17.145,0z M7.036,10.392V3.623l6.769,3.384L7.036,10.392z"/>
+          <svg class="social-list__svg" width="50%" height="19px">
+            <use xlink:href="#icon-youtube"></use>
           </svg>
         </a>
       </li>
     </ul>
     <p class="author">Разработано
       <a class="author__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="author__link-svg" id="logo-htmlacademy" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-        <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+        <svg class="author__link-svg" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09">
+          <use xlink:href="#icon-logo-htmlacademy"></use>
         </svg>
       </a>
     </p>

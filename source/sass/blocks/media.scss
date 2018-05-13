@@ -15,10 +15,6 @@
   }
 }
 
-.media__icon-none {
-  display: none;
-}
-
 .media__photo {
   width: 100%;
 
@@ -58,6 +54,7 @@
   &-pic {
     position: absolute;
     bottom: 0;
+    fill: #b2b2b2;
   }
 
   &-count {

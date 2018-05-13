@@ -28,7 +28,7 @@ Array.from(inputs).forEach(el => {
 
 //обработка клика отправки формы -> показ модальных окон
 btn.addEventListener('click', (event) => {
-  event.preventDefault();
+  //event.preventDefault();
   if (btn.classList.contains('button-disable')) {
     return;
   } else {

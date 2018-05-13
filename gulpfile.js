@@ -22,10 +22,10 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
@@ -35,7 +35,7 @@ gulp.task("sprite", function () {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("html", function () {
@@ -43,7 +43,7 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(gulp.dest("source"));
+    .pipe(gulp.dest("build"));
 });
 
 gulp.task("images", function () {
@@ -59,12 +59,12 @@ gulp.task("images", function () {
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("serve", ["style"], function() {
+gulp.task("serve", function() {
   server.init({
-    server: "source/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -72,11 +72,12 @@ gulp.task("serve", ["style"], function() {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("source/*.html").on("change", server.reload);
+  //gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/*.html", ["html"]);
 });
 
 gulp.task("build", function (done) {
- run("style", "sprite", "html", done);
+ run("clean", "copy", "style", "images", "webp", "sprite", "html", "serve", done);
 });
 
 gulp.task("copy", function () {
@@ -93,4 +94,13 @@ gulp.task("copy", function () {
 var del = require("del");
 gulp.task("clean", function () {
   return del("build");
+});
+
+var gulp = require('gulp');
+var svgmin = require('gulp-svgmin');
+
+gulp.task('default', function () {
+    return gulp.src('source/img/sprite.svg')
+        .pipe(svgmin())
+        .pipe(gulp.dest('source/img/'));
 });
