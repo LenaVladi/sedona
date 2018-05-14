@@ -52,7 +52,6 @@
 
   .prompt__title {
     font-size: 30px;
-    margin: 20px 0;
   }
 
   .prompt__text {
@@ -70,25 +69,23 @@
 @media (min-width: $desktop-width) {
   .prompt {
     padding: 50px 0;
-    height: 330px;
 
     &--sub {
-      padding-top: 60px;
-      height: 245px;
+      padding-top: 50px;
     }
-  }
 
-  .prompt__title {
-    margin: 8px 0 18px 0;
+    &--sub .prompt__text {
+      margin: 10px 0 20px;
+    }
   }
 
   .prompt__text {
     margin: 11px 0 26px 0;
-    padding: 0 110px;
+    padding: 0 100px;
   }
 
   .prompt__request {
-    margin: 0 auto;
+    margin: 20px auto 0;
     width: 459px;
   }
 }

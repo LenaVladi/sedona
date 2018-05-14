@@ -189,7 +189,7 @@
   }
 
   .videoplayer__controls-fullscreen {
-    right: 5%;
+    right: 4%;
 
     &:hover {
       fill: $controls-color-btn--hover;
@@ -197,6 +197,8 @@
   }
 
   .videoplayer__controls-replay {
+    left: 4%;
+
     &:hover {
       fill: $controls-color-btn--hover;
     }

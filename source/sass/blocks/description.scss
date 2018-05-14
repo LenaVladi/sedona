@@ -66,13 +66,15 @@
 @media (min-width: $desktop-width) {
   .description {
     width: 702px;
-    height: 205px;
     margin: 0 auto;
     padding: 27px 50px 8px;
 
     &--sub {
-      height: 197px;
       padding-top: 30px;
+    }
+
+    &--sub-size-m {
+      padding: 30px 40px 40px;
     }
   }
 
