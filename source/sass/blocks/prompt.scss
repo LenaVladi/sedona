@@ -5,8 +5,11 @@
   padding: 10px 20px 47px;
 
   &--sub {
-    height: 192px;
-    padding: 20px;
+    padding: 15px 20px;
+  }
+
+  &--sub .prompt__text {
+    margin: 7px 0 20px;
   }
 }
 
