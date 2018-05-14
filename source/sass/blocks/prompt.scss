@@ -41,22 +41,22 @@
 
 @media (min-width: $tablet-width) {
   .prompt {
-    padding: 48px 0 62px;
+    padding: 38px 0 62px;
     width: 648px;
 
     &--sub {
       height: auto;
-      padding: 60px 0 35px;
+      padding: 50px 0 53px;
     }
   }
 
   .prompt__title {
     font-size: 30px;
-    margin: 8px 0;
+    margin: 20px 0;
   }
 
   .prompt__text {
-    margin: 20px 0 40px 0;
+    margin: 10px 0 40px;
     padding: 0 80px;
     line-height: 24px;
   }

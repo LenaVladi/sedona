@@ -20,7 +20,8 @@
   }
 
   &--contact {
-    height: 195px;
+    height: 199px;
+    padding-top: 3px;
   }
 
   &--impression {
@@ -38,7 +39,7 @@
 }
 
 .get-feedback__contact {
-  min-height: 287px;
+  min-height: 288px;
 }
 
 .get-feedback__impression {
@@ -94,6 +95,7 @@
 
     &--contact {
       height: 198px;
+      padding-top: 0;
     }
 
     &--impression {
