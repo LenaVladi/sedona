@@ -1,9 +1,9 @@
 "use strict";
 
-const failurePopUp = document.querySelector(".failure-pop-up"),
+var failurePopUp = document.querySelector(".failure-pop-up"),
       successPopUp = document.querySelector(".success-pop-up");
 
-const formFeedback = document.querySelector(".get-feedback"),
+var formFeedback = document.querySelector(".get-feedback"),
       btn = document.querySelector(".get-feedback__request"),
       inputs = formFeedback.querySelectorAll("input[required]");
 
@@ -13,11 +13,11 @@ successPopUp.classList.remove("success-pop-up--visible");
 console.log(inputs);
 
 // заполнены важные поля
-let ok = [];
+var ok = [];
 
 //подписка за событие о заполнении инпутов
-Array.from(inputs).forEach(el => {
-  el.addEventListener("change", () => {
+Array.from(inputs).forEach(function(el) {
+  el.addEventListener("change", function() {
     if (ok.length == 3) {
       btn.classList.remove("button-disable");
     } else {
@@ -27,12 +27,14 @@ Array.from(inputs).forEach(el => {
 })
 
 //обработка клика отправки формы -> показ модальных окон
-btn.addEventListener("click", (event) => {
+btn.addEventListener("click", function(event) {
   //event.preventDefault();
   if (btn.classList.contains("button-disable")) {
     return;
   } else {
-    const err = Array.from(inputs).find(el => el.value == "");
+    var err = Array.from(inputs).find(function(el) {
+      el.value == "";
+    });
 
     if (err) {
       failurePopUp.classList.add("failure-pop-up--visible");
@@ -44,7 +46,11 @@ btn.addEventListener("click", (event) => {
 })
 
 //закрывает модальное окно
-failurePopUp.querySelector(".failure-pop-up__button").addEventListener("click", () => failurePopUp.classList.remove("failure-pop-up--visible"));
+failurePopUp.querySelector(".failure-pop-up__button").addEventListener("click", function() {
+  failurePopUp.classList.remove("failure-pop-up--visible");
+});
 
 //закрывает модальное окно
-successPopUp.querySelector(".success-pop-up__button").addEventListener("click", () => successPopUp.classList.remove("success-pop-up--visible"));
+successPopUp.querySelector(".success-pop-up__button").addEventListener("click", function() {
+  successPopUp.classList.remove("success-pop-up--visible");
+});

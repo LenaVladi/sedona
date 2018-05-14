@@ -2,7 +2,7 @@
 
 //открытие/закрытие меню
 
-const nav = document.querySelector(".nav"),
+var nav = document.querySelector(".nav"),
       navToggle = document.querySelector(".nav__toggle-button");
 
 nav.classList.remove("nav--nojs");
