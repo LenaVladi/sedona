@@ -5,32 +5,28 @@
 
 ---
 
-**Обратите внимание, что папка с вашими исходными файлами — `source/`.**
+## Седона - это поиск гостиниц в небольшом городке с одноименным названием. 
 
-Полезный файл:
+Адаптивная сетка (мобильная, планшетная и десктопная версия) , много декоративных элементов.
+При переходе на разные разрешения сетка сайта изменяется, меняется стилизация некоторых элементов, нестандартные поля ввода на странице Формы отзыва.
+На проекте производилась работа с адаптивными изображениями и произведена их ретинизация.
 
-- [Contributing.md](Contributing.md) — руководство по внесению изменений.
+#### Используемые инструменты
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`, `package-lock.json`, `package.json`._
+Препроцессор: Sass,
+Сборка: Gulp.
 
 ---
 
-### Памятка
+<a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
 
-#### 1. Зарегистрируйтесь на Гитхабе
+Репозиторий создан для обучения на интенсивном онлайн‑курсе «[Профессиональный HTML и CSS](https://htmlacademy.ru/intensive/adaptive)», уровень 2 от [HTML Academy](https://htmlacademy.ru).
 
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
+[travis-image]: https://travis-ci.org/htmlacademy-adaptive/549115-sedona.svg?branch=master
+[travis-url]: https://travis-ci.org/htmlacademy-adaptive/549115-sedona
+[dependency-image]: https://david-dm.org/htmlacademy-adaptive/549115-sedona/dev-status.svg?style=flat-square
+[dependency-url]: https://david-dm.org/htmlacademy-adaptive/549115-sedona?type=dev
 
-#### 2. Создайте форк
-
-Откройте репозиторий и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
-
-<img width="769" alt="" src="https://cloud.githubusercontent.com/assets/10909/15455709/984b9002-206d-11e6-89fd-63eeaadc25df.png">
-
-Получится вот так:
-
-<img width="769" alt="" src="https://cloud.githubusercontent.com/assets/10909/15455710/986fc058-206d-11e6-9874-3392a84cbb6f.png">
 
 #### 3. Клонируйте репозиторий на свой компьютер
 
