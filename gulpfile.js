@@ -19,10 +19,12 @@ var svgmin = require("gulp-svgmin");
 var uglify = require("gulp-uglify");
 var htmlmin = require('gulp-htmlmin');
 var pump = require("pump");
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task("style", function() {
   gulp.src("source/sass/style.scss")
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer()
@@ -30,6 +32,7 @@ gulp.task("style", function() {
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });

@@ -36,7 +36,11 @@
     "build": "gulp build",
     "start": "npm run build && gulp serve",
     "sprite": "gulp sprite",
-    "html": "gulp html"
+    "html": "gulp html",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   },
   "browserslist": [
     "last 2 versions",
