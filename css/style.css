@@ -1468,9 +1468,10 @@ body {
 .media__photo-wrap {
   margin: 0;
   margin-bottom: 20px;
-  contain: content; }
-  .media__photo-wrap--big {
-    margin: 0; }
+  contain: content;
+}
+.media__photo-wrap--big {
+  margin: 0; }
 
 .media__photo {
   width: 100%; }
