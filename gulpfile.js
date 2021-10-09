@@ -21,7 +21,7 @@ var htmlmin = require('gulp-htmlmin');
 var pump = require("pump");
 var sourcemaps = require('gulp-sourcemaps');
 
-gulp.task("style", function() {
+gulp.task("style", function () {
   gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemaps.init())
@@ -73,32 +73,18 @@ gulp.task("webp", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("serve", function() {
-  server.init({
-    server: "build/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  //gulp.watch("source/*.html").on("change", server.reload);
-  gulp.watch("source/*.html", ["html"]);
-});
-
 gulp.task("build", function (done) {
- run("clean", "copy", "style", "images", "webp", "sprite", "html", "compress", done);
+  run("clean", "copy", "style", "images", "webp", "sprite", "html", "compress", done);
 });
 
 gulp.task("copy", function () {
   return gulp.src([
-      "source/fonts/**/*.{woff,woff2}",
-      "source/img/**",
-      "source/js/**"
-    ], {
-      base: "source"
-})
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**"
+  ], {
+    base: "source"
+  })
     .pipe(gulp.dest("build"));
 });
 
@@ -108,23 +94,39 @@ gulp.task("clean", function () {
 });
 
 gulp.task("default", function () {
-    return gulp.src("source/img/sprite.svg")
-        .pipe(svgmin())
-        .pipe(gulp.dest("source/img/"));
+  return gulp.src("source/img/sprite.svg")
+    .pipe(svgmin())
+    .pipe(gulp.dest("source/img/"));
 });
 
-gulp.task("compress", function(cb) {
+gulp.task("compress", function (cb) {
   pump([
-  gulp.src("source/js/*.js"),
-  uglify()
+    gulp.src("source/js/*.js"),
+    uglify()
   ],
-  cb
+    cb
   )
-  .pipe(rename(function(path) {
-  path.basename += ".min"
-  }))
-  .pipe(gulp.dest("build/js"));
+    .pipe(rename(function (path) {
+      path.basename += ".min"
+    }))
+    .pipe(gulp.dest("build/js"));
 });
+
+gulp.task("serve", function () {
+  server.init({
+    server: "build/",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
+
+  gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("source/js/*.js", ["compress"]);
+  //gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/*.html", ["html"]);
+});
+
 
 // gulp.task("minhtml", function() {
 //   return gulp.src("source/*.html")

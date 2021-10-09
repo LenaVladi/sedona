@@ -4,7 +4,6 @@
 
 .media__item {
   margin: 0 0 21px 0;
-  height: 394px;
   padding: 21px;
   padding-bottom: 0;
   text-align: left;
@@ -17,7 +16,6 @@
 
 .media__photo-wrap {
   margin: 0;
-  height: 281px;
   margin-bottom: 20px;
   contain: content;
 
@@ -28,6 +26,7 @@
 
 .media__photo {
   width: 100%;
+  // display: block;
 }
 
 .media__description {
@@ -77,12 +76,10 @@
     margin: 0;
     padding: 0;
     width: 50%;
-    height: 348px;
     background-color: $lightgray;
 
     &--big {
       width: 100%;
-      height: 478px;
       flex-grow: 1;
     }
   }
@@ -132,7 +129,6 @@
     padding: 0;
     min-width: 400px;
     width: 30%;
-    height: 269px;
 
     &--big {
       width: 100%;

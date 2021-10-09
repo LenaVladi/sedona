@@ -34,7 +34,7 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "npm run build && gulp serve",
+    "dev": "npm run build && gulp serve",
     "sprite": "gulp sprite",
     "html": "gulp html",
     "preinstall": "npx npm-force-resolutions"
